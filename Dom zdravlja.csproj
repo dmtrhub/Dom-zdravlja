@@ -125,6 +125,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Lekar.cs" />
+    <Compile Include="Models\Pacijent.cs" />
+    <Compile Include="Models\Termin.cs" />
+    <Compile Include="Models\ZdravstveniKarton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

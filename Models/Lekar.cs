@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Dom_zdravlja.Models
 {
-    public class Administrator
+    public class Lekar
     {
         [Required]
         [Display(Name = "Korisničko ime")]
@@ -25,5 +25,11 @@ namespace Dom_zdravlja.Models
         [Required]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DatumRodjenja { get; set; }
+
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        public List<Termin> Termini { get; set; }
     }
 }
