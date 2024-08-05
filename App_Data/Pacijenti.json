@@ -1,0 +1,12 @@
+﻿[
+  {
+    "KorisnickoIme": "mirkoVukovic",
+    "JMBG": "0101990890123",
+    "Sifra": "password1",
+    "Ime": "Mirko",
+    "Prezime": "Vukovic",
+    "DatumRodjenja": "01/01/1990",
+    "ElektronskaPosta": "mirko123@example.com",
+    "ZakazaniTermini": []
+  }
+]

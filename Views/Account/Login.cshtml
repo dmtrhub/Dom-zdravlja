@@ -1,0 +1,25 @@
+﻿@model Dom_zdravlja.Models.Login.LoginViewModel
+
+@{
+    ViewBag.Title = "Prijava";
+}
+
+<h2>Prijava</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.KorisnickoIme, new { @class = "control-label" })
+        @Html.TextBoxFor(m => m.KorisnickoIme, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.KorisnickoIme, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sifra, new { @class = "control-label" })
+        @Html.PasswordFor(m => m.Sifra, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Sifra, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Prijavi se" class="btn btn-primary" />
+    </div>
+}

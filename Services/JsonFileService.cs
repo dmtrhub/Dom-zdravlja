@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Dom_zdravlja.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,13 +20,16 @@ namespace Dom_zdravlja.Services
 
         public List<T> GetAll()
         {
-            if (!File.Exists(_filePath))
-            {
-                return new List<T>();
-            }
-
             var json = File.ReadAllText(_filePath);
-            return JsonConvert.DeserializeObject<List<T>>(json);
+
+            var settings = new JsonSerializerSettings
+            {
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                DateTimeZoneHandling = DateTimeZoneHandling.Local
+            };
+            settings.Converters.Add(new CustomDateTimeConverter());
+
+            return JsonConvert.DeserializeObject<List<T>>(json, settings);
         }
 
         public void Add(T item)

@@ -1,0 +1,11 @@
+﻿[
+  {
+    "KorisnickoIme": "kroslak",
+    "Sifra": "password123",
+    "Ime": "Darko",
+    "Prezime": "Kroslak",
+    "DatumRodjenja": "03/05/1965",
+    "ElektronskaPosta": "drkroslak@example.com",
+    "Termini": []
+  }
+]
