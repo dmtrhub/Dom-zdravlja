@@ -9,35 +9,47 @@ using System.Web;
 
 namespace Dom_zdravlja.Services
 {
-    public class JsonFileService<T>
+    public class JsonFileService<T> : IJsonFileService<T>
     {
         private readonly string _filePath;
+        private readonly JsonSerializerSettings _jsonSettings;
 
         public JsonFileService(string filePath)
         {
-            _filePath = filePath;
-        }
-
-        public List<T> GetAll()
-        {
-            var json = File.ReadAllText(_filePath);
-
-            var settings = new JsonSerializerSettings
+            _filePath = HttpContext.Current.Server.MapPath(filePath);
+            _jsonSettings = new JsonSerializerSettings
             {
-                DateFormatHandling = DateFormatHandling.IsoDateFormat,
-                DateTimeZoneHandling = DateTimeZoneHandling.Local
+                Formatting = Formatting.Indented,
+                Converters = new List<JsonConverter> { new DateConverter(), new DateTimeConverter() }
             };
-            settings.Converters.Add(new CustomDateTimeConverter());
-
-            return JsonConvert.DeserializeObject<List<T>>(json, settings);
         }
 
-        public void Add(T item)
+        public List<T> Read()
         {
-            var items = GetAll();
-            items.Add(item);
-            var json = JsonConvert.SerializeObject(items, Formatting.Indented);
+            if (!File.Exists(_filePath))
+            {
+                return new List<T>();
+            }
+
+            var json = File.ReadAllText(_filePath);
+            return JsonConvert.DeserializeObject<List<T>>(json, _jsonSettings);
+        }
+
+        public void Write(List<T> items)
+        {
+            var json = JsonConvert.SerializeObject(items, _jsonSettings);
             File.WriteAllText(_filePath, json);
+        }
+
+        public void Update(T item, Predicate<T> predicate)
+        {
+            var items = Read();
+            var index = items.FindIndex(predicate);
+            if (index != -1)
+            {
+                items[index] = item;
+                Write(items);
+            }
         }
     }
 }

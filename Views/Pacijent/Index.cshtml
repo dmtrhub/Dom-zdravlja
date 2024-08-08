@@ -1,6 +1,36 @@
-﻿@{ 
-    ViewBag.Title = "Pacijent"; 
+﻿@model List<Dom_zdravlja.Models.Termin>
+
+@{
+    ViewBag.Title = "Pacijent";
+    var pacijent = Session["User"] as Dom_zdravlja.Models.Pacijent;
+    var pozdrav = pacijent != null ? $"Pozdrav, {pacijent.KorisnickoIme}!" : "Pozdrav!";
 }
 
-<h2>Pacijent Dashboard</h2>
-<p>Dobrodošli, @Session["Username"]!</p>
+<h2>@pozdrav</h2>
+<br>
+<!-- Dugme za zakazivanje novog termina -->
+<div style="text-align: right; margin-bottom: 20px;">
+    <a href="/Pacijent/IzborLekara" class="btn btn-success">Zakažite termin</a>
+</div>
+
+<h4>Vaši zakazani termini</h4>
+<!-- Tabela sa zakazanim terminima -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lekar</th>
+            <th>Datum i Vreme</th>
+            <th>Opis Terapije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var termin in Model)
+        {
+            <tr>
+                <td>@termin.Lekar.Ime @termin.Lekar.Prezime</td>
+                <td>@termin.DatumVreme</td>
+                <td>@termin.OpisTerapije</td>
+            </tr>
+        }
+    </tbody>
+</table>

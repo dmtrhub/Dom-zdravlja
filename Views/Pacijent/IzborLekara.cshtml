@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Dom_zdravlja.Models.Lekar>
+
+@{
+    ViewBag.Title = "Izbor Lekara";
+}
+
+<h2>Izaberite lekara</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lekar in Model)
+        {
+            <tr>
+                <td>@lekar.Ime</td>
+                <td>@lekar.Prezime</td>
+                <td>
+                    @using (Html.BeginForm("IzborTermina", "Pacijent", FormMethod.Post))
+                    {
+                        @Html.Hidden("lekarKorisnickoIme", lekar.KorisnickoIme)
+                        <button type="submit" class="btn btn-primary">Pogledaj termine</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

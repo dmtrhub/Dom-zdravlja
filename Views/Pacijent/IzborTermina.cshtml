@@ -1,0 +1,46 @@
+﻿@model Dom_zdravlja.Models.Lekar
+
+@{
+    ViewBag.Title = "Izbor Termina";
+    var slobodniTermini = Model.Termini.Where(t => t.Status == "slobodan").ToList();
+}
+
+<h2>Izaberite termin - dr. @Model.Ime @Model.Prezime</h2>
+
+@if (slobodniTermini.Count == 0)
+{
+    <div class="alert alert-warning">
+        Trenutno nema slobodnih termina za izabranog lekara. Molimo vas da pokušate kasnije.
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Datum i Vreme</th>
+                <th>Opis terapije</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var termin in slobodniTermini)
+            {
+                <tr>
+                    <td>@termin.DatumVreme</td>
+                    <td>@termin.OpisTerapije</td>
+                    <td>
+                        @using (Html.BeginForm("ZakaziTermin", "Pacijent", FormMethod.Post))
+                        {
+                            @Html.Hidden("lekarKorisnickoIme", Model.KorisnickoIme)
+                            @Html.Hidden("datumVreme", termin.DatumVreme.ToString("dd'/'MM'/'yyyy HH:mm"))
+                            <button type="submit" class="btn btn-primary">Zakazi</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

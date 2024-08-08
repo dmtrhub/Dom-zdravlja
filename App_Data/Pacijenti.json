@@ -1,12 +1,42 @@
-﻿[
+[
   {
+    "Email": "mirko123@example.com",
+    "ZakazaniTermini": [
+      {
+        "Lekar": {
+          "Email": "petar.petrovic@example.com",
+          "Termini": null,
+          "KorisnickoIme": "dr.petrovic",
+          "Sifra": null,
+          "Ime": "Petar",
+          "Prezime": "Petrović",
+          "DatumRodjenja": "22/11/1980"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "01/08/2024 12:00",
+        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+      },
+      {
+        "Lekar": {
+          "Email": "ivan.ivanovic@example.com",
+          "Termini": null,
+          "KorisnickoIme": "dr.ivanovic",
+          "Sifra": null,
+          "Ime": "Ivan",
+          "Prezime": "Ivanović",
+          "DatumRodjenja": "15/05/1975"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "30/07/2024 10:00",
+        "OpisTerapije": "50 piva dnevno alo"
+      }
+    ],
     "KorisnickoIme": "mirkoVukovic",
-    "JMBG": "0101990890123",
     "Sifra": "password1",
     "Ime": "Mirko",
     "Prezime": "Vukovic",
-    "DatumRodjenja": "01/01/1990",
-    "ElektronskaPosta": "mirko123@example.com",
-    "ZakazaniTermini": []
+    "DatumRodjenja": "01/01/1990"
   }
 ]

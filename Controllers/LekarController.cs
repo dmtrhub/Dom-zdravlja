@@ -12,7 +12,7 @@ namespace Dom_zdravlja.Controllers
         public ActionResult Index()
         {
             if(Session["UserRole"]?.ToString() != "Lekar")        
-                return RedirectToAction("Login", "Account");          
+                return RedirectToAction("Login", "Home");          
 
             return View();
         }

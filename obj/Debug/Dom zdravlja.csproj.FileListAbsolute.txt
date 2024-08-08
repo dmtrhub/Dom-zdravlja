@@ -117,3 +117,8 @@ G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.CoreCompileI
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.CopyComplete
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.dll
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.pdb
+G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Abstractions.dll
+G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Container.dll
+G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Mvc5.dll
+G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Abstractions.pdb
+G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Container.pdb

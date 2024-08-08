@@ -1,0 +1,30 @@
+﻿@model Dom_zdravlja.Models.LoginModel
+
+@{ ViewBag.Title = "Prijava"; }
+
+<h2>Prijava</h2>
+
+<!-- Prikaz greške ako postoji -->
+@if (ViewBag.ErrorMessage != null)
+{
+<div style="color: red;">
+    <strong>@ViewBag.ErrorMessage</strong>
+</div>}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+@Html.AntiForgeryToken()
+
+<div>
+    @Html.LabelFor(model => model.KorisnickoIme)
+    @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control", required = true })
+    @Html.ValidationMessageFor(model => model.KorisnickoIme)
+</div>
+<div>
+    @Html.LabelFor(model => model.Sifra)
+    @Html.PasswordFor(model => model.Sifra, new { @class = "form-control", required = true })
+    @Html.ValidationMessageFor(model => model.Sifra)
+</div>
+<div>
+    <button type="submit" class="btn btn-primary">Prijavi se</button>
+</div>}
