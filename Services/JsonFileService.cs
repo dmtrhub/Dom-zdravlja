@@ -1,4 +1,5 @@
-﻿using Dom_zdravlja.Utilities;
+﻿using Dom_zdravlja.Models;
+using Dom_zdravlja.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web;
 
 namespace Dom_zdravlja.Services
 {
-    public class JsonFileService<T> : IJsonFileService<T>
+    public class JsonFileService<T> : IJsonFileService<T> where T : class
     {
         private readonly string _filePath;
         private readonly JsonSerializerSettings _jsonSettings;
@@ -37,7 +38,25 @@ namespace Dom_zdravlja.Services
 
         public void Write(List<T> items)
         {
-            var json = JsonConvert.SerializeObject(items, _jsonSettings);
+            var settings = new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                DateFormatString = "dd/MM/yyyy HH:mm", // Postavite format datuma za termine
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore
+            };
+
+            foreach (var item in items)
+            {
+                // Proverite da li su svi objekti inicijalizovani
+                if (item is Termin termin && termin.Lekar == null)
+                {
+                    throw new Exception("Termin's Lekar is null");
+                }
+            }
+
+            var json = JsonConvert.SerializeObject(items, settings);
             File.WriteAllText(_filePath, json);
         }
 

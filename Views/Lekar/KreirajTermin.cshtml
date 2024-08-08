@@ -1,0 +1,22 @@
+﻿@model Dom_zdravlja.Models.Termin
+
+@{
+    ViewBag.Title = "Kreiraj Termin";
+}
+
+<h2>Kreiraj Termin</h2>
+
+@using (Html.BeginForm("KreirajTermin", "Lekar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.DatumVreme, "Datum i Vreme")
+        @Html.TextBoxFor(model => model.DatumVreme, new { @class = "form-control", @type = "datetime-local" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.OpisTerapije, "Opis Terapije")
+        @Html.TextBoxFor(model => model.OpisTerapije, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Kreiraj</button>
+}

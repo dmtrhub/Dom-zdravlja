@@ -1,7 +1,19 @@
 [
   {
+    "$id": "1",
     "Email": "drkroslak@example.com",
-    "Termini": [],
+    "Termini": [
+      {
+        "$id": "2",
+        "Lekar": {
+          "$ref": "1"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "19/08/2024 18:31",
+        "OpisTerapije": "sadasdasd"
+      }
+    ],
     "KorisnickoIme": "kroslak",
     "Sifra": "password123",
     "Ime": "Darko",
@@ -9,14 +21,15 @@
     "DatumRodjenja": "03/05/1965"
   },
   {
+    "$id": "3",
     "Email": "ivan.ivanovic@example.com",
     "Termini": [
       {
+        "$id": "4",
         "Lekar": {
+          "$id": "5",
           "Email": "ivan.ivanovic@example.com",
-          "Termini": null,
           "KorisnickoIme": "dr.ivanovic",
-          "Sifra": null,
           "Ime": "Ivan",
           "Prezime": "Ivanović",
           "DatumRodjenja": "15/05/1975"
@@ -25,6 +38,16 @@
         "Status": "zakazan",
         "DatumVreme": "30/07/2024 10:00",
         "OpisTerapije": "50 piva dnevno alo"
+      },
+      {
+        "$id": "6",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "28/08/2024 18:38",
+        "OpisTerapije": "halo"
       }
     ],
     "KorisnickoIme": "dr.ivanovic",
@@ -34,14 +57,15 @@
     "DatumRodjenja": "15/05/1975"
   },
   {
+    "$id": "7",
     "Email": "petar.petrovic@example.com",
     "Termini": [
       {
+        "$id": "8",
         "Lekar": {
+          "$id": "9",
           "Email": "petar.petrovic@example.com",
-          "Termini": null,
           "KorisnickoIme": "dr.petrovic",
-          "Sifra": null,
           "Ime": "Petar",
           "Prezime": "Petrović",
           "DatumRodjenja": "22/11/1980"

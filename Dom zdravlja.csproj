@@ -254,6 +254,7 @@
     <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Pacijent\IzborLekara.cshtml" />
     <Content Include="Views\Pacijent\IzborTermina.cshtml" />
+    <Content Include="Views\Lekar\KreirajTermin.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

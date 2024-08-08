@@ -1,13 +1,14 @@
 [
   {
+    "$id": "1",
     "Email": "mirko123@example.com",
     "ZakazaniTermini": [
       {
+        "$id": "2",
         "Lekar": {
+          "$id": "3",
           "Email": "petar.petrovic@example.com",
-          "Termini": null,
           "KorisnickoIme": "dr.petrovic",
-          "Sifra": null,
           "Ime": "Petar",
           "Prezime": "Petrović",
           "DatumRodjenja": "22/11/1980"
@@ -18,11 +19,11 @@
         "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
       },
       {
+        "$id": "4",
         "Lekar": {
+          "$id": "5",
           "Email": "ivan.ivanovic@example.com",
-          "Termini": null,
           "KorisnickoIme": "dr.ivanovic",
-          "Sifra": null,
           "Ime": "Ivan",
           "Prezime": "Ivanović",
           "DatumRodjenja": "15/05/1975"
@@ -31,6 +32,63 @@
         "Status": "zakazan",
         "DatumVreme": "30/07/2024 10:00",
         "OpisTerapije": "50 piva dnevno alo"
+      },
+      {
+        "$id": "6",
+        "Lekar": {
+          "$id": "7",
+          "Email": "drkroslak@example.com",
+          "Termini": [
+            {
+              "$ref": "6"
+            }
+          ],
+          "KorisnickoIme": "kroslak",
+          "Sifra": "password123",
+          "Ime": "Darko",
+          "Prezime": "Kroslak",
+          "DatumRodjenja": "03/05/1965"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "19/08/2024 18:31",
+        "OpisTerapije": "sadasdasd"
+      },
+      {
+        "$id": "8",
+        "Lekar": {
+          "$id": "9",
+          "Email": "ivan.ivanovic@example.com",
+          "Termini": [
+            {
+              "$id": "10",
+              "Lekar": {
+                "$id": "11",
+                "Email": "ivan.ivanovic@example.com",
+                "KorisnickoIme": "dr.ivanovic",
+                "Ime": "Ivan",
+                "Prezime": "Ivanović",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "KorisnickoImePacijenta": "mirkoVukovic",
+              "Status": "zakazan",
+              "DatumVreme": "30/07/2024 10:00",
+              "OpisTerapije": "50 piva dnevno alo"
+            },
+            {
+              "$ref": "8"
+            }
+          ],
+          "KorisnickoIme": "dr.ivanovic",
+          "Sifra": "password12345",
+          "Ime": "Ivan",
+          "Prezime": "Ivanovic",
+          "DatumRodjenja": "15/05/1975"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "28/08/2024 18:38",
+        "OpisTerapije": "halo"
       }
     ],
     "KorisnickoIme": "mirkoVukovic",

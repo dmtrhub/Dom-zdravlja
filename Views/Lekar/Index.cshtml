@@ -1,6 +1,31 @@
-﻿@{ 
-    ViewBag.Title = "Lekar"; 
+﻿@model List<Dom_zdravlja.Models.Termin>
+
+@{
+    ViewBag.Title = "Pregled termina";
 }
 
-<h2>Lekar Dashboard</h2>
-<p>Dobrodošli, @Session["Username"]!</p>
+<p>
+    <a href="@Url.Action("KreirajTermin", "Lekar")" class="btn btn-success" style="float: right;">Kreiraj termin</a>
+</p>
+
+<h2>Pregled termina</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum i Vreme</th>
+            <th>Opis Terapije</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var termin in Model)
+        {
+            <tr>
+                <td>@termin.DatumVreme.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@termin.OpisTerapije</td>
+                <td>@termin.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
