@@ -8,12 +8,13 @@
         "Lekar": {
           "$ref": "1"
         },
-        "KorisnickoImePacijenta": "mirkoVukovic",
         "Status": "zakazan",
         "DatumVreme": "19/08/2024 18:31",
         "OpisTerapije": "sadasdasd"
       }
     ],
+    "Terapije": [],
+    "Pacijenti": [],
     "KorisnickoIme": "kroslak",
     "Sifra": "password123",
     "Ime": "Darko",
@@ -29,12 +30,14 @@
         "Lekar": {
           "$id": "5",
           "Email": "ivan.ivanovic@example.com",
+          "Termini": [],
+          "Terapije": [],
+          "Pacijenti": [],
           "KorisnickoIme": "dr.ivanovic",
           "Ime": "Ivan",
           "Prezime": "Ivanović",
           "DatumRodjenja": "15/05/1975"
         },
-        "KorisnickoImePacijenta": "mirkoVukovic",
         "Status": "zakazan",
         "DatumVreme": "30/07/2024 10:00",
         "OpisTerapije": "50 piva dnevno alo"
@@ -44,10 +47,2641 @@
         "Lekar": {
           "$ref": "3"
         },
-        "KorisnickoImePacijenta": "mirkoVukovic",
         "Status": "zakazan",
         "DatumVreme": "28/08/2024 18:38",
         "OpisTerapije": "halo"
+      },
+      {
+        "$id": "7",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "Status": "zakazan",
+        "DatumVreme": "10/08/2024 18:54",
+        "OpisTerapije": "Andol"
+      },
+      {
+        "$id": "8",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "KorisnickoImePacijenta": "mirkoVukovic",
+        "Status": "zakazan",
+        "DatumVreme": "30/08/2024 19:47",
+        "OpisTerapije": "olololooo"
+      }
+    ],
+    "Terapije": [
+      {
+        "$id": "9",
+        "Opis": "Konjska mast 3x dnevno.",
+        "Datum": "09/08/2024",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "Pacijent": {
+          "$id": "10",
+          "Email": "mirko123@example.com",
+          "ZakazaniTermini": [
+            {
+              "$id": "11",
+              "Lekar": {
+                "$id": "12",
+                "Email": "petar.petrovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.petrovic",
+                "Ime": "Petar",
+                "Prezime": "Petrović",
+                "DatumRodjenja": "22/11/1980"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "01/08/2024 12:00",
+              "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+            },
+            {
+              "$id": "13",
+              "Lekar": {
+                "$id": "14",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Ime": "Ivan",
+                "Prezime": "Ivanović",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "30/07/2024 10:00",
+              "OpisTerapije": "50 piva dnevno alo"
+            },
+            {
+              "$id": "15",
+              "Lekar": {
+                "$id": "16",
+                "Email": "drkroslak@example.com",
+                "Termini": [
+                  {
+                    "$ref": "15"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "kroslak",
+                "Sifra": "password123",
+                "Ime": "Darko",
+                "Prezime": "Kroslak",
+                "DatumRodjenja": "03/05/1965"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "19/08/2024 18:31",
+              "OpisTerapije": "sadasdasd"
+            },
+            {
+              "$id": "17",
+              "Lekar": {
+                "$id": "18",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "19",
+                    "Lekar": {
+                      "$id": "20",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$ref": "17"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "28/08/2024 18:38",
+              "OpisTerapije": "halo"
+            },
+            {
+              "$id": "21",
+              "Lekar": {
+                "$id": "22",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "23",
+                    "Lekar": {
+                      "$id": "24",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "25",
+                    "Lekar": {
+                      "$ref": "22"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$ref": "21"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$ref": "10"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "10/08/2024 18:54",
+              "OpisTerapije": "Andol"
+            }
+          ],
+          "Terapije": [
+            {
+              "$id": "26",
+              "Opis": "Konjska mast 3x dnevno.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "27",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "28",
+                    "Lekar": {
+                      "$id": "29",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "30",
+                    "Lekar": {
+                      "$ref": "27"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "31",
+                    "Lekar": {
+                      "$ref": "27"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "32",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "33",
+                        "Lekar": {
+                          "$id": "34",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "35",
+                        "Lekar": {
+                          "$id": "36",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "37",
+                        "Lekar": {
+                          "$id": "38",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "37"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "39",
+                        "Lekar": {
+                          "$id": "40",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "41",
+                              "Lekar": {
+                                "$id": "42",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "39"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "31"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$id": "43",
+              "Opis": "Konjska mast.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "44",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "45",
+                    "Lekar": {
+                      "$id": "46",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "47",
+                    "Lekar": {
+                      "$ref": "44"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "48",
+                    "Lekar": {
+                      "$ref": "44"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "49",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "50",
+                        "Lekar": {
+                          "$id": "51",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "52",
+                        "Lekar": {
+                          "$id": "53",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "54",
+                        "Lekar": {
+                          "$id": "55",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "54"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "56",
+                        "Lekar": {
+                          "$id": "57",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "58",
+                              "Lekar": {
+                                "$id": "59",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "56"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "48"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$ref": "9"
+            }
+          ],
+          "KorisnickoIme": "mirkoVukovic",
+          "Sifra": "pass123",
+          "Ime": "Mirko",
+          "Prezime": "Vukovic",
+          "DatumRodjenja": "12/11/1998"
+        }
+      },
+      {
+        "$id": "60",
+        "Opis": "Brufen 300mg",
+        "Datum": "09/08/2024",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "Pacijent": {
+          "$id": "61",
+          "Email": "mirko123@example.com",
+          "ZakazaniTermini": [
+            {
+              "$id": "62",
+              "Lekar": {
+                "$id": "63",
+                "Email": "petar.petrovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.petrovic",
+                "Ime": "Petar",
+                "Prezime": "Petrović",
+                "DatumRodjenja": "22/11/1980"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "01/08/2024 12:00",
+              "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+            },
+            {
+              "$id": "64",
+              "Lekar": {
+                "$id": "65",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Ime": "Ivan",
+                "Prezime": "Ivanović",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "30/07/2024 10:00",
+              "OpisTerapije": "50 piva dnevno alo"
+            },
+            {
+              "$id": "66",
+              "Lekar": {
+                "$id": "67",
+                "Email": "drkroslak@example.com",
+                "Termini": [
+                  {
+                    "$ref": "66"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "kroslak",
+                "Sifra": "password123",
+                "Ime": "Darko",
+                "Prezime": "Kroslak",
+                "DatumRodjenja": "03/05/1965"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "19/08/2024 18:31",
+              "OpisTerapije": "sadasdasd"
+            },
+            {
+              "$id": "68",
+              "Lekar": {
+                "$id": "69",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "70",
+                    "Lekar": {
+                      "$id": "71",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$ref": "68"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "28/08/2024 18:38",
+              "OpisTerapije": "halo"
+            },
+            {
+              "$id": "72",
+              "Lekar": {
+                "$id": "73",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "74",
+                    "Lekar": {
+                      "$id": "75",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "76",
+                    "Lekar": {
+                      "$ref": "73"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$ref": "72"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$ref": "61"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "10/08/2024 18:54",
+              "OpisTerapije": "Andol"
+            }
+          ],
+          "Terapije": [
+            {
+              "$id": "77",
+              "Opis": "Konjska mast 3x dnevno.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "78",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "79",
+                    "Lekar": {
+                      "$id": "80",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "81",
+                    "Lekar": {
+                      "$ref": "78"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "82",
+                    "Lekar": {
+                      "$ref": "78"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "83",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "84",
+                        "Lekar": {
+                          "$id": "85",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "86",
+                        "Lekar": {
+                          "$id": "87",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "88",
+                        "Lekar": {
+                          "$id": "89",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "88"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "90",
+                        "Lekar": {
+                          "$id": "91",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "92",
+                              "Lekar": {
+                                "$id": "93",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "90"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "82"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$id": "94",
+              "Opis": "Konjska mast.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "95",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "96",
+                    "Lekar": {
+                      "$id": "97",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "98",
+                    "Lekar": {
+                      "$ref": "95"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "99",
+                    "Lekar": {
+                      "$ref": "95"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "100",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "101",
+                        "Lekar": {
+                          "$id": "102",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "103",
+                        "Lekar": {
+                          "$id": "104",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "105",
+                        "Lekar": {
+                          "$id": "106",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "105"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "107",
+                        "Lekar": {
+                          "$id": "108",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "109",
+                              "Lekar": {
+                                "$id": "110",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "107"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "99"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$id": "111",
+              "Opis": "Konjska mast 3x dnevno.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "112",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "113",
+                    "Lekar": {
+                      "$id": "114",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "115",
+                    "Lekar": {
+                      "$ref": "112"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "116",
+                    "Lekar": {
+                      "$ref": "112"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "117",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "118",
+                        "Lekar": {
+                          "$id": "119",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "120",
+                        "Lekar": {
+                          "$id": "121",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "122",
+                        "Lekar": {
+                          "$id": "123",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "122"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "124",
+                        "Lekar": {
+                          "$id": "125",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "126",
+                              "Lekar": {
+                                "$id": "127",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "124"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "116"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Pacijent": {
+                "$ref": "61"
+              }
+            },
+            {
+              "$ref": "60"
+            }
+          ],
+          "KorisnickoIme": "mirkoVukovic",
+          "Sifra": "pass123",
+          "Ime": "Mirko",
+          "Prezime": "Vukovic",
+          "DatumRodjenja": "12/11/1998"
+        }
+      },
+      {
+        "$id": "128",
+        "Naziv": "Hehe",
+        "Opis": "hehehhe",
+        "Datum": "09/08/2024",
+        "Lekar": {
+          "$ref": "3"
+        },
+        "Pacijent": {
+          "$id": "129",
+          "Email": "mirko123@example.com",
+          "ZakazaniTermini": [
+            {
+              "$id": "130",
+              "Lekar": {
+                "$id": "131",
+                "Email": "petar.petrovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.petrovic",
+                "Ime": "Petar",
+                "Prezime": "Petrović",
+                "DatumRodjenja": "22/11/1980"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "01/08/2024 12:00",
+              "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+            },
+            {
+              "$id": "132",
+              "Lekar": {
+                "$id": "133",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Ime": "Ivan",
+                "Prezime": "Ivanović",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "30/07/2024 10:00",
+              "OpisTerapije": "50 piva dnevno alo"
+            },
+            {
+              "$id": "134",
+              "Lekar": {
+                "$id": "135",
+                "Email": "drkroslak@example.com",
+                "Termini": [
+                  {
+                    "$ref": "134"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "kroslak",
+                "Sifra": "password123",
+                "Ime": "Darko",
+                "Prezime": "Kroslak",
+                "DatumRodjenja": "03/05/1965"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "19/08/2024 18:31",
+              "OpisTerapije": "sadasdasd"
+            },
+            {
+              "$id": "136",
+              "Lekar": {
+                "$id": "137",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "138",
+                    "Lekar": {
+                      "$id": "139",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$ref": "136"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "28/08/2024 18:38",
+              "OpisTerapije": "halo"
+            },
+            {
+              "$id": "140",
+              "Lekar": {
+                "$id": "141",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "142",
+                    "Lekar": {
+                      "$id": "143",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "144",
+                    "Lekar": {
+                      "$ref": "141"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$ref": "140"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$ref": "129"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Status": "zakazan",
+              "DatumVreme": "10/08/2024 18:54",
+              "OpisTerapije": "Andol"
+            }
+          ],
+          "Terapije": [
+            {
+              "$id": "145",
+              "Opis": "Konjska mast 3x dnevno.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "146",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "147",
+                    "Lekar": {
+                      "$id": "148",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "149",
+                    "Lekar": {
+                      "$ref": "146"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "150",
+                    "Lekar": {
+                      "$ref": "146"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "151",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "152",
+                        "Lekar": {
+                          "$id": "153",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "154",
+                        "Lekar": {
+                          "$id": "155",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "156",
+                        "Lekar": {
+                          "$id": "157",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "156"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "158",
+                        "Lekar": {
+                          "$id": "159",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "160",
+                              "Lekar": {
+                                "$id": "161",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "158"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "150"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$id": "162",
+              "Opis": "Konjska mast.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "163",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "164",
+                    "Lekar": {
+                      "$id": "165",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "166",
+                    "Lekar": {
+                      "$ref": "163"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "167",
+                    "Lekar": {
+                      "$ref": "163"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "168",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "169",
+                        "Lekar": {
+                          "$id": "170",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "171",
+                        "Lekar": {
+                          "$id": "172",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "173",
+                        "Lekar": {
+                          "$id": "174",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "173"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "175",
+                        "Lekar": {
+                          "$id": "176",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "177",
+                              "Lekar": {
+                                "$id": "178",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "175"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "167"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              }
+            },
+            {
+              "$id": "179",
+              "Opis": "Konjska mast 3x dnevno.",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "180",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "181",
+                    "Lekar": {
+                      "$id": "182",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "183",
+                    "Lekar": {
+                      "$ref": "180"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "184",
+                    "Lekar": {
+                      "$ref": "180"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [],
+                "Pacijenti": [
+                  {
+                    "$id": "185",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "186",
+                        "Lekar": {
+                          "$id": "187",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "188",
+                        "Lekar": {
+                          "$id": "189",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "190",
+                        "Lekar": {
+                          "$id": "191",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "190"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "192",
+                        "Lekar": {
+                          "$id": "193",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "194",
+                              "Lekar": {
+                                "$id": "195",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "192"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "184"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Pacijent": {
+                "$ref": "129"
+              }
+            },
+            {
+              "$id": "196",
+              "Opis": "Brufen 300mg",
+              "Datum": "09/08/2024",
+              "Lekar": {
+                "$id": "197",
+                "Email": "ivan.ivanovic@example.com",
+                "Termini": [
+                  {
+                    "$id": "198",
+                    "Lekar": {
+                      "$id": "199",
+                      "Email": "ivan.ivanovic@example.com",
+                      "Termini": [],
+                      "Terapije": [],
+                      "Pacijenti": [],
+                      "KorisnickoIme": "dr.ivanovic",
+                      "Ime": "Ivan",
+                      "Prezime": "Ivanović",
+                      "DatumRodjenja": "15/05/1975"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "30/07/2024 10:00",
+                    "OpisTerapije": "50 piva dnevno alo"
+                  },
+                  {
+                    "$id": "200",
+                    "Lekar": {
+                      "$ref": "197"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "28/08/2024 18:38",
+                    "OpisTerapije": "halo"
+                  },
+                  {
+                    "$id": "201",
+                    "Lekar": {
+                      "$ref": "197"
+                    },
+                    "Status": "zakazan",
+                    "DatumVreme": "10/08/2024 18:54",
+                    "OpisTerapije": "Andol"
+                  }
+                ],
+                "Terapije": [
+                  {
+                    "$id": "202",
+                    "Opis": "Konjska mast 3x dnevno.",
+                    "Datum": "09/08/2024",
+                    "Lekar": {
+                      "$ref": "197"
+                    },
+                    "Pacijent": {
+                      "$id": "203",
+                      "Email": "mirko123@example.com",
+                      "ZakazaniTermini": [
+                        {
+                          "$id": "204",
+                          "Lekar": {
+                            "$id": "205",
+                            "Email": "petar.petrovic@example.com",
+                            "Termini": [],
+                            "Terapije": [],
+                            "Pacijenti": [],
+                            "KorisnickoIme": "dr.petrovic",
+                            "Ime": "Petar",
+                            "Prezime": "Petrović",
+                            "DatumRodjenja": "22/11/1980"
+                          },
+                          "Status": "zakazan",
+                          "DatumVreme": "01/08/2024 12:00",
+                          "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                        },
+                        {
+                          "$id": "206",
+                          "Lekar": {
+                            "$id": "207",
+                            "Email": "ivan.ivanovic@example.com",
+                            "Termini": [],
+                            "Terapije": [],
+                            "Pacijenti": [],
+                            "KorisnickoIme": "dr.ivanovic",
+                            "Ime": "Ivan",
+                            "Prezime": "Ivanović",
+                            "DatumRodjenja": "15/05/1975"
+                          },
+                          "Status": "zakazan",
+                          "DatumVreme": "30/07/2024 10:00",
+                          "OpisTerapije": "50 piva dnevno alo"
+                        },
+                        {
+                          "$id": "208",
+                          "Lekar": {
+                            "$id": "209",
+                            "Email": "drkroslak@example.com",
+                            "Termini": [
+                              {
+                                "$ref": "208"
+                              }
+                            ],
+                            "Terapije": [],
+                            "Pacijenti": [],
+                            "KorisnickoIme": "kroslak",
+                            "Sifra": "password123",
+                            "Ime": "Darko",
+                            "Prezime": "Kroslak",
+                            "DatumRodjenja": "03/05/1965"
+                          },
+                          "Status": "zakazan",
+                          "DatumVreme": "19/08/2024 18:31",
+                          "OpisTerapije": "sadasdasd"
+                        },
+                        {
+                          "$id": "210",
+                          "Lekar": {
+                            "$id": "211",
+                            "Email": "ivan.ivanovic@example.com",
+                            "Termini": [
+                              {
+                                "$id": "212",
+                                "Lekar": {
+                                  "$id": "213",
+                                  "Email": "ivan.ivanovic@example.com",
+                                  "Termini": [],
+                                  "Terapije": [],
+                                  "Pacijenti": [],
+                                  "KorisnickoIme": "dr.ivanovic",
+                                  "Ime": "Ivan",
+                                  "Prezime": "Ivanović",
+                                  "DatumRodjenja": "15/05/1975"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "30/07/2024 10:00",
+                                "OpisTerapije": "50 piva dnevno alo"
+                              },
+                              {
+                                "$ref": "210"
+                              }
+                            ],
+                            "Terapije": [],
+                            "Pacijenti": [],
+                            "KorisnickoIme": "dr.ivanovic",
+                            "Sifra": "password12345",
+                            "Ime": "Ivan",
+                            "Prezime": "Ivanovic",
+                            "DatumRodjenja": "15/05/1975"
+                          },
+                          "Status": "zakazan",
+                          "DatumVreme": "28/08/2024 18:38",
+                          "OpisTerapije": "halo"
+                        },
+                        {
+                          "$id": "214",
+                          "Lekar": {
+                            "$id": "215",
+                            "Email": "ivan.ivanovic@example.com",
+                            "Termini": [
+                              {
+                                "$id": "216",
+                                "Lekar": {
+                                  "$id": "217",
+                                  "Email": "ivan.ivanovic@example.com",
+                                  "Termini": [],
+                                  "Terapije": [],
+                                  "Pacijenti": [],
+                                  "KorisnickoIme": "dr.ivanovic",
+                                  "Ime": "Ivan",
+                                  "Prezime": "Ivanović",
+                                  "DatumRodjenja": "15/05/1975"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "30/07/2024 10:00",
+                                "OpisTerapije": "50 piva dnevno alo"
+                              },
+                              {
+                                "$id": "218",
+                                "Lekar": {
+                                  "$ref": "215"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "28/08/2024 18:38",
+                                "OpisTerapije": "halo"
+                              },
+                              {
+                                "$ref": "214"
+                              }
+                            ],
+                            "Terapije": [],
+                            "Pacijenti": [
+                              {
+                                "$ref": "203"
+                              }
+                            ],
+                            "KorisnickoIme": "dr.ivanovic",
+                            "Sifra": "password12345",
+                            "Ime": "Ivan",
+                            "Prezime": "Ivanovic",
+                            "DatumRodjenja": "15/05/1975"
+                          },
+                          "Status": "zakazan",
+                          "DatumVreme": "10/08/2024 18:54",
+                          "OpisTerapije": "Andol"
+                        }
+                      ],
+                      "Terapije": [
+                        {
+                          "$id": "219",
+                          "Opis": "Konjska mast 3x dnevno.",
+                          "Datum": "09/08/2024",
+                          "Lekar": {
+                            "$id": "220",
+                            "Email": "ivan.ivanovic@example.com",
+                            "Termini": [
+                              {
+                                "$id": "221",
+                                "Lekar": {
+                                  "$id": "222",
+                                  "Email": "ivan.ivanovic@example.com",
+                                  "Termini": [],
+                                  "Terapije": [],
+                                  "Pacijenti": [],
+                                  "KorisnickoIme": "dr.ivanovic",
+                                  "Ime": "Ivan",
+                                  "Prezime": "Ivanović",
+                                  "DatumRodjenja": "15/05/1975"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "30/07/2024 10:00",
+                                "OpisTerapije": "50 piva dnevno alo"
+                              },
+                              {
+                                "$id": "223",
+                                "Lekar": {
+                                  "$ref": "220"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "28/08/2024 18:38",
+                                "OpisTerapije": "halo"
+                              },
+                              {
+                                "$id": "224",
+                                "Lekar": {
+                                  "$ref": "220"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "10/08/2024 18:54",
+                                "OpisTerapije": "Andol"
+                              }
+                            ],
+                            "Terapije": [],
+                            "Pacijenti": [
+                              {
+                                "$id": "225",
+                                "Email": "mirko123@example.com",
+                                "ZakazaniTermini": [
+                                  {
+                                    "$id": "226",
+                                    "Lekar": {
+                                      "$id": "227",
+                                      "Email": "petar.petrovic@example.com",
+                                      "Termini": [],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.petrovic",
+                                      "Ime": "Petar",
+                                      "Prezime": "Petrović",
+                                      "DatumRodjenja": "22/11/1980"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "01/08/2024 12:00",
+                                    "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                                  },
+                                  {
+                                    "$id": "228",
+                                    "Lekar": {
+                                      "$id": "229",
+                                      "Email": "ivan.ivanovic@example.com",
+                                      "Termini": [],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.ivanovic",
+                                      "Ime": "Ivan",
+                                      "Prezime": "Ivanović",
+                                      "DatumRodjenja": "15/05/1975"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "30/07/2024 10:00",
+                                    "OpisTerapije": "50 piva dnevno alo"
+                                  },
+                                  {
+                                    "$id": "230",
+                                    "Lekar": {
+                                      "$id": "231",
+                                      "Email": "drkroslak@example.com",
+                                      "Termini": [
+                                        {
+                                          "$ref": "230"
+                                        }
+                                      ],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "kroslak",
+                                      "Sifra": "password123",
+                                      "Ime": "Darko",
+                                      "Prezime": "Kroslak",
+                                      "DatumRodjenja": "03/05/1965"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "19/08/2024 18:31",
+                                    "OpisTerapije": "sadasdasd"
+                                  },
+                                  {
+                                    "$id": "232",
+                                    "Lekar": {
+                                      "$id": "233",
+                                      "Email": "ivan.ivanovic@example.com",
+                                      "Termini": [
+                                        {
+                                          "$id": "234",
+                                          "Lekar": {
+                                            "$id": "235",
+                                            "Email": "ivan.ivanovic@example.com",
+                                            "Termini": [],
+                                            "Terapije": [],
+                                            "Pacijenti": [],
+                                            "KorisnickoIme": "dr.ivanovic",
+                                            "Ime": "Ivan",
+                                            "Prezime": "Ivanović",
+                                            "DatumRodjenja": "15/05/1975"
+                                          },
+                                          "Status": "zakazan",
+                                          "DatumVreme": "30/07/2024 10:00",
+                                          "OpisTerapije": "50 piva dnevno alo"
+                                        },
+                                        {
+                                          "$ref": "232"
+                                        }
+                                      ],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.ivanovic",
+                                      "Sifra": "password12345",
+                                      "Ime": "Ivan",
+                                      "Prezime": "Ivanovic",
+                                      "DatumRodjenja": "15/05/1975"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "28/08/2024 18:38",
+                                    "OpisTerapije": "halo"
+                                  },
+                                  {
+                                    "$ref": "224"
+                                  }
+                                ],
+                                "Terapije": [],
+                                "KorisnickoIme": "mirkoVukovic",
+                                "Sifra": "pass123",
+                                "Ime": "Mirko",
+                                "Prezime": "Vukovic",
+                                "DatumRodjenja": "12/11/1998"
+                              }
+                            ],
+                            "KorisnickoIme": "dr.ivanovic",
+                            "Sifra": "password12345",
+                            "Ime": "Ivan",
+                            "Prezime": "Ivanovic",
+                            "DatumRodjenja": "15/05/1975"
+                          }
+                        },
+                        {
+                          "$id": "236",
+                          "Opis": "Konjska mast.",
+                          "Datum": "09/08/2024",
+                          "Lekar": {
+                            "$id": "237",
+                            "Email": "ivan.ivanovic@example.com",
+                            "Termini": [
+                              {
+                                "$id": "238",
+                                "Lekar": {
+                                  "$id": "239",
+                                  "Email": "ivan.ivanovic@example.com",
+                                  "Termini": [],
+                                  "Terapije": [],
+                                  "Pacijenti": [],
+                                  "KorisnickoIme": "dr.ivanovic",
+                                  "Ime": "Ivan",
+                                  "Prezime": "Ivanović",
+                                  "DatumRodjenja": "15/05/1975"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "30/07/2024 10:00",
+                                "OpisTerapije": "50 piva dnevno alo"
+                              },
+                              {
+                                "$id": "240",
+                                "Lekar": {
+                                  "$ref": "237"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "28/08/2024 18:38",
+                                "OpisTerapije": "halo"
+                              },
+                              {
+                                "$id": "241",
+                                "Lekar": {
+                                  "$ref": "237"
+                                },
+                                "Status": "zakazan",
+                                "DatumVreme": "10/08/2024 18:54",
+                                "OpisTerapije": "Andol"
+                              }
+                            ],
+                            "Terapije": [],
+                            "Pacijenti": [
+                              {
+                                "$id": "242",
+                                "Email": "mirko123@example.com",
+                                "ZakazaniTermini": [
+                                  {
+                                    "$id": "243",
+                                    "Lekar": {
+                                      "$id": "244",
+                                      "Email": "petar.petrovic@example.com",
+                                      "Termini": [],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.petrovic",
+                                      "Ime": "Petar",
+                                      "Prezime": "Petrović",
+                                      "DatumRodjenja": "22/11/1980"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "01/08/2024 12:00",
+                                    "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                                  },
+                                  {
+                                    "$id": "245",
+                                    "Lekar": {
+                                      "$id": "246",
+                                      "Email": "ivan.ivanovic@example.com",
+                                      "Termini": [],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.ivanovic",
+                                      "Ime": "Ivan",
+                                      "Prezime": "Ivanović",
+                                      "DatumRodjenja": "15/05/1975"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "30/07/2024 10:00",
+                                    "OpisTerapije": "50 piva dnevno alo"
+                                  },
+                                  {
+                                    "$id": "247",
+                                    "Lekar": {
+                                      "$id": "248",
+                                      "Email": "drkroslak@example.com",
+                                      "Termini": [
+                                        {
+                                          "$ref": "247"
+                                        }
+                                      ],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "kroslak",
+                                      "Sifra": "password123",
+                                      "Ime": "Darko",
+                                      "Prezime": "Kroslak",
+                                      "DatumRodjenja": "03/05/1965"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "19/08/2024 18:31",
+                                    "OpisTerapije": "sadasdasd"
+                                  },
+                                  {
+                                    "$id": "249",
+                                    "Lekar": {
+                                      "$id": "250",
+                                      "Email": "ivan.ivanovic@example.com",
+                                      "Termini": [
+                                        {
+                                          "$id": "251",
+                                          "Lekar": {
+                                            "$id": "252",
+                                            "Email": "ivan.ivanovic@example.com",
+                                            "Termini": [],
+                                            "Terapije": [],
+                                            "Pacijenti": [],
+                                            "KorisnickoIme": "dr.ivanovic",
+                                            "Ime": "Ivan",
+                                            "Prezime": "Ivanović",
+                                            "DatumRodjenja": "15/05/1975"
+                                          },
+                                          "Status": "zakazan",
+                                          "DatumVreme": "30/07/2024 10:00",
+                                          "OpisTerapije": "50 piva dnevno alo"
+                                        },
+                                        {
+                                          "$ref": "249"
+                                        }
+                                      ],
+                                      "Terapije": [],
+                                      "Pacijenti": [],
+                                      "KorisnickoIme": "dr.ivanovic",
+                                      "Sifra": "password12345",
+                                      "Ime": "Ivan",
+                                      "Prezime": "Ivanovic",
+                                      "DatumRodjenja": "15/05/1975"
+                                    },
+                                    "Status": "zakazan",
+                                    "DatumVreme": "28/08/2024 18:38",
+                                    "OpisTerapije": "halo"
+                                  },
+                                  {
+                                    "$ref": "241"
+                                  }
+                                ],
+                                "Terapije": [],
+                                "KorisnickoIme": "mirkoVukovic",
+                                "Sifra": "pass123",
+                                "Ime": "Mirko",
+                                "Prezime": "Vukovic",
+                                "DatumRodjenja": "12/11/1998"
+                              }
+                            ],
+                            "KorisnickoIme": "dr.ivanovic",
+                            "Sifra": "password12345",
+                            "Ime": "Ivan",
+                            "Prezime": "Ivanovic",
+                            "DatumRodjenja": "15/05/1975"
+                          }
+                        },
+                        {
+                          "$ref": "202"
+                        }
+                      ],
+                      "KorisnickoIme": "mirkoVukovic",
+                      "Sifra": "pass123",
+                      "Ime": "Mirko",
+                      "Prezime": "Vukovic",
+                      "DatumRodjenja": "12/11/1998"
+                    }
+                  }
+                ],
+                "Pacijenti": [
+                  {
+                    "$id": "253",
+                    "Email": "mirko123@example.com",
+                    "ZakazaniTermini": [
+                      {
+                        "$id": "254",
+                        "Lekar": {
+                          "$id": "255",
+                          "Email": "petar.petrovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.petrovic",
+                          "Ime": "Petar",
+                          "Prezime": "Petrović",
+                          "DatumRodjenja": "22/11/1980"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "01/08/2024 12:00",
+                        "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+                      },
+                      {
+                        "$id": "256",
+                        "Lekar": {
+                          "$id": "257",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanović",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "30/07/2024 10:00",
+                        "OpisTerapije": "50 piva dnevno alo"
+                      },
+                      {
+                        "$id": "258",
+                        "Lekar": {
+                          "$id": "259",
+                          "Email": "drkroslak@example.com",
+                          "Termini": [
+                            {
+                              "$ref": "258"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "kroslak",
+                          "Sifra": "password123",
+                          "Ime": "Darko",
+                          "Prezime": "Kroslak",
+                          "DatumRodjenja": "03/05/1965"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "19/08/2024 18:31",
+                        "OpisTerapije": "sadasdasd"
+                      },
+                      {
+                        "$id": "260",
+                        "Lekar": {
+                          "$id": "261",
+                          "Email": "ivan.ivanovic@example.com",
+                          "Termini": [
+                            {
+                              "$id": "262",
+                              "Lekar": {
+                                "$id": "263",
+                                "Email": "ivan.ivanovic@example.com",
+                                "Termini": [],
+                                "Terapije": [],
+                                "Pacijenti": [],
+                                "KorisnickoIme": "dr.ivanovic",
+                                "Ime": "Ivan",
+                                "Prezime": "Ivanović",
+                                "DatumRodjenja": "15/05/1975"
+                              },
+                              "Status": "zakazan",
+                              "DatumVreme": "30/07/2024 10:00",
+                              "OpisTerapije": "50 piva dnevno alo"
+                            },
+                            {
+                              "$ref": "260"
+                            }
+                          ],
+                          "Terapije": [],
+                          "Pacijenti": [],
+                          "KorisnickoIme": "dr.ivanovic",
+                          "Sifra": "password12345",
+                          "Ime": "Ivan",
+                          "Prezime": "Ivanovic",
+                          "DatumRodjenja": "15/05/1975"
+                        },
+                        "Status": "zakazan",
+                        "DatumVreme": "28/08/2024 18:38",
+                        "OpisTerapije": "halo"
+                      },
+                      {
+                        "$ref": "201"
+                      }
+                    ],
+                    "Terapije": [],
+                    "KorisnickoIme": "mirkoVukovic",
+                    "Sifra": "pass123",
+                    "Ime": "Mirko",
+                    "Prezime": "Vukovic",
+                    "DatumRodjenja": "12/11/1998"
+                  }
+                ],
+                "KorisnickoIme": "dr.ivanovic",
+                "Sifra": "password12345",
+                "Ime": "Ivan",
+                "Prezime": "Ivanovic",
+                "DatumRodjenja": "15/05/1975"
+              },
+              "Pacijent": {
+                "$ref": "129"
+              }
+            },
+            {
+              "$ref": "128"
+            }
+          ],
+          "KorisnickoIme": "mirkoVukovic",
+          "Sifra": "pass123",
+          "Ime": "Mirko",
+          "Prezime": "Vukovic",
+          "DatumRodjenja": "12/11/1998"
+        }
+      }
+    ],
+    "Pacijenti": [
+      {
+        "$id": "264",
+        "Email": "mirko123@example.com",
+        "ZakazaniTermini": [
+          {
+            "$id": "265",
+            "Lekar": {
+              "$id": "266",
+              "Email": "petar.petrovic@example.com",
+              "Termini": [],
+              "Terapije": [],
+              "Pacijenti": [],
+              "KorisnickoIme": "dr.petrovic",
+              "Ime": "Petar",
+              "Prezime": "Petrović",
+              "DatumRodjenja": "22/11/1980"
+            },
+            "Status": "zakazan",
+            "DatumVreme": "01/08/2024 12:00",
+            "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
+          },
+          {
+            "$id": "267",
+            "Lekar": {
+              "$id": "268",
+              "Email": "ivan.ivanovic@example.com",
+              "Termini": [],
+              "Terapije": [],
+              "Pacijenti": [],
+              "KorisnickoIme": "dr.ivanovic",
+              "Ime": "Ivan",
+              "Prezime": "Ivanović",
+              "DatumRodjenja": "15/05/1975"
+            },
+            "Status": "zakazan",
+            "DatumVreme": "30/07/2024 10:00",
+            "OpisTerapije": "50 piva dnevno alo"
+          },
+          {
+            "$id": "269",
+            "Lekar": {
+              "$id": "270",
+              "Email": "drkroslak@example.com",
+              "Termini": [
+                {
+                  "$ref": "269"
+                }
+              ],
+              "Terapije": [],
+              "Pacijenti": [],
+              "KorisnickoIme": "kroslak",
+              "Sifra": "password123",
+              "Ime": "Darko",
+              "Prezime": "Kroslak",
+              "DatumRodjenja": "03/05/1965"
+            },
+            "Status": "zakazan",
+            "DatumVreme": "19/08/2024 18:31",
+            "OpisTerapije": "sadasdasd"
+          },
+          {
+            "$id": "271",
+            "Lekar": {
+              "$id": "272",
+              "Email": "ivan.ivanovic@example.com",
+              "Termini": [
+                {
+                  "$id": "273",
+                  "Lekar": {
+                    "$id": "274",
+                    "Email": "ivan.ivanovic@example.com",
+                    "Termini": [],
+                    "Terapije": [],
+                    "Pacijenti": [],
+                    "KorisnickoIme": "dr.ivanovic",
+                    "Ime": "Ivan",
+                    "Prezime": "Ivanović",
+                    "DatumRodjenja": "15/05/1975"
+                  },
+                  "Status": "zakazan",
+                  "DatumVreme": "30/07/2024 10:00",
+                  "OpisTerapije": "50 piva dnevno alo"
+                },
+                {
+                  "$ref": "271"
+                }
+              ],
+              "Terapije": [],
+              "Pacijenti": [],
+              "KorisnickoIme": "dr.ivanovic",
+              "Sifra": "password12345",
+              "Ime": "Ivan",
+              "Prezime": "Ivanovic",
+              "DatumRodjenja": "15/05/1975"
+            },
+            "Status": "zakazan",
+            "DatumVreme": "28/08/2024 18:38",
+            "OpisTerapije": "halo"
+          },
+          {
+            "$ref": "7"
+          }
+        ],
+        "Terapije": [],
+        "KorisnickoIme": "mirkoVukovic",
+        "Sifra": "pass123",
+        "Ime": "Mirko",
+        "Prezime": "Vukovic",
+        "DatumRodjenja": "12/11/1998"
       }
     ],
     "KorisnickoIme": "dr.ivanovic",
@@ -57,25 +2691,29 @@
     "DatumRodjenja": "15/05/1975"
   },
   {
-    "$id": "7",
+    "$id": "275",
     "Email": "petar.petrovic@example.com",
     "Termini": [
       {
-        "$id": "8",
+        "$id": "276",
         "Lekar": {
-          "$id": "9",
+          "$id": "277",
           "Email": "petar.petrovic@example.com",
+          "Termini": [],
+          "Terapije": [],
+          "Pacijenti": [],
           "KorisnickoIme": "dr.petrovic",
           "Ime": "Petar",
           "Prezime": "Petrović",
           "DatumRodjenja": "22/11/1980"
         },
-        "KorisnickoImePacijenta": "mirkoVukovic",
         "Status": "zakazan",
         "DatumVreme": "01/08/2024 12:00",
         "OpisTerapije": "Antibiotik - Amoksicilin 500mg, 3x dnevno, 7 dana"
       }
     ],
+    "Terapije": [],
+    "Pacijenti": [],
     "KorisnickoIme": "dr.petrovic",
     "Sifra": "password456",
     "Ime": "Petar",

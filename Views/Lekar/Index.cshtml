@@ -1,31 +1,38 @@
-﻿@model List<Dom_zdravlja.Models.Termin>
+﻿@model Dom_zdravlja.Models.Lekar
 
 @{
-    ViewBag.Title = "Pregled termina";
+    ViewBag.Title = "Pregled Termina";
 }
 
+
 <p>
-    <a href="@Url.Action("KreirajTermin", "Lekar")" class="btn btn-success" style="float: right;">Kreiraj termin</a>
+    <a href="@Url.Action("KreirajTermin", "Lekar")" class="btn btn-success" style="float: right;">Kreirajte termin</a>
+    @Html.ActionLink("Prepišite terapiju", "IzborPacijentaZaTerapiju", null, new { @class = "btn btn-primary" })
 </p>
 
-<h2>Pregled termina</h2>
+<p>
+    @Html.ActionLink("Pregledajte terapije", "PregledTerapija", "Lekar", null, new { @class = "btn btn-primary" })
+</p>
 
-<table class="table table-striped">
+<h2>Pregled vaših termina</h2>
+
+<table class="table">
     <thead>
         <tr>
-            <th>Datum i Vreme</th>
-            <th>Opis Terapije</th>
+            <th>Pacijent</th>
+            <th>Datum</th>
             <th>Status</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var termin in Model)
+        @foreach (var termin in Model.Termini)
         {
-            <tr>
-                <td>@termin.DatumVreme.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>@termin.OpisTerapije</td>
-                <td>@termin.Status</td>
-            </tr>
+<tr>
+    <td>@termin.KorisnickoImePacijenta</td>
+    <td>@termin.DatumVreme.ToString("dd/MM/yyyy HH:mm")</td>
+    <td>@termin.Status</td>
+</tr>
         }
     </tbody>
 </table>
+

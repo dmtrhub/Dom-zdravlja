@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Dom_zdravlja.Models.Terapija>
+
+@{
+    ViewBag.Title = "Pregled terapija";
+}
+
+<h2>Pregled terapija</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Datum</th>
+            <th>Opis</th>
+            <th>Pacijent</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var terapija in Model)
+        {
+            <tr>
+                <td>@terapija.Naziv</td>
+                <td>@terapija.Datum.ToString("dd/MM/yyyy")</td>
+                <td>@terapija.Opis</td>
+                <td>@terapija.Pacijent.KorisnickoIme</td>
+            </tr>
+        }
+    </tbody>
+</table>

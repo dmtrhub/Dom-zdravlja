@@ -1,0 +1,27 @@
+﻿@model List<Dom_zdravlja.Models.Pacijent>
+
+@{
+    ViewBag.Title = "Vaši pacijenti";
+}
+
+<h2>Vaši pacijenti</h2>
+
+<table class="table">
+    <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Korisničko ime</th>
+        <th></th>
+    </tr>
+    @foreach (var pacijent in Model)
+    {
+        <tr>
+            <td>@pacijent.Ime</td>
+            <td>@pacijent.Prezime</td>
+            <td>@pacijent.KorisnickoIme</td>
+            <td>
+                @Html.ActionLink("Prepišite terapiju", "PrepisivanjeTerapije", new { pacijentKorisnickoIme = pacijent.KorisnickoIme })
+            </td>
+        </tr>
+    }
+</table>

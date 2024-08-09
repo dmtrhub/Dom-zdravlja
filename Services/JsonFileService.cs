@@ -54,6 +54,16 @@ namespace Dom_zdravlja.Services
                 {
                     throw new Exception("Termin's Lekar is null");
                 }
+
+                if (item is Pacijent pacijent && pacijent.Terapije == null)
+                {
+                    pacijent.Terapije = pacijent.Terapije ?? new List<Terapija>();
+                }
+                if (item is Lekar lekar && lekar.Terapije == null)
+                {
+                    lekar.Terapije = lekar.Terapije ?? new List<Terapija>();
+                    lekar.Pacijenti = lekar.Pacijenti ?? new List<Pacijent>();
+                }
             }
 
             var json = JsonConvert.SerializeObject(items, settings);

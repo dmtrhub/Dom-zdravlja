@@ -202,6 +202,7 @@
     <Compile Include="Models\Lekar.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Pacijent.cs" />
+    <Compile Include="Models\Terapija.cs" />
     <Compile Include="Models\Termin.cs" />
     <Compile Include="Models\ZdravstveniKarton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,6 +256,10 @@
     <Content Include="Views\Pacijent\IzborLekara.cshtml" />
     <Content Include="Views\Pacijent\IzborTermina.cshtml" />
     <Content Include="Views\Lekar\KreirajTermin.cshtml" />
+    <Content Include="Views\Lekar\PrepisivanjeTerapije.cshtml" />
+    <Content Include="Views\Lekar\IzborPacijentaZaTerapiju.cshtml" />
+    <Content Include="Views\Lekar\PregledTerapija.cshtml" />
+    <Content Include="Views\Pacijent\PregledTerapija.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

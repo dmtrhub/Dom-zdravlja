@@ -12,10 +12,12 @@ namespace Dom_zdravlja.Controllers
     public class LekarController : Controller
     {
         private IJsonFileService<Lekar> _lekarService;
+        private IJsonFileService<Pacijent> _pacijentService;
 
         public LekarController()
         {
             _lekarService = new JsonFileService<Lekar>("~/App_Data/Lekari.json");
+            _pacijentService = new JsonFileService<Pacijent>("~/App_Data/Pacijenti.json");
         }
 
         // GET: Lekar
@@ -28,7 +30,17 @@ namespace Dom_zdravlja.Controllers
             }
 
             var termini = lekar.Termini;
-            return View(termini);
+
+            foreach (var termin in termini)
+            {
+                if (termin.Pacijent != null && !lekar.Pacijenti.Any(p => p.KorisnickoIme == termin.Pacijent.KorisnickoIme))
+                {
+                    lekar.Pacijenti.Add(termin.Pacijent);
+                }
+            }
+
+            _lekarService.Update(lekar, l => l.KorisnickoIme == lekar.KorisnickoIme);
+            return View(lekar);
         }
 
         // GET: Kreiranje termina
@@ -67,6 +79,74 @@ namespace Dom_zdravlja.Controllers
             _lekarService.Update(lekar, l => l.KorisnickoIme == lekar.KorisnickoIme);
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult IzborPacijentaZaTerapiju()
+        {
+            var lekar = Session["User"] as Lekar;
+            var pacijenti = lekar.Pacijenti;
+            return View(pacijenti);
+        }
+
+
+        public ActionResult PrepisivanjeTerapije(string pacijentKorisnickoIme)
+        {
+            var lekar = Session["User"] as Lekar;
+            var pacijenti = _pacijentService.Read();
+            var pacijent = pacijenti.FirstOrDefault(p => p.KorisnickoIme == pacijentKorisnickoIme);
+
+            if (pacijent == null)
+            {
+                return HttpNotFound();
+            }
+
+            var terapija = new Terapija
+            {
+                Lekar = lekar,
+                Datum = DateTime.Now,
+                Pacijent = pacijent
+            };
+
+            return View(terapija);
+        }
+
+
+        [HttpPost]
+        public ActionResult PrepisivanjeTerapije(Terapija model)
+        {
+            var lekar = Session["User"] as Lekar;
+            var pacijenti = _pacijentService.Read();
+            var pacijent = pacijenti.FirstOrDefault(p => p.KorisnickoIme == model.Pacijent.KorisnickoIme);
+
+            if(pacijent == null || !pacijent.ZakazaniTermini.Any(t => t.Lekar.KorisnickoIme == lekar.KorisnickoIme && t.DatumVreme < DateTime.Now))
+            {
+                ViewBag.ErrorMessage = "Pacijent nije vaš ili nije imao termin kod vas u prošlosti.";
+                return View(model);
+            }
+
+            var novaTerapija = new Terapija
+            {
+                Lekar = lekar,
+                Datum = DateTime.Now,
+                Opis = model.Opis,
+                Pacijent = pacijent,
+                Naziv = model.Naziv
+            };
+
+            pacijent.Terapije.Add(novaTerapija);
+            _pacijentService.Update(pacijent, p => p.KorisnickoIme == pacijent.KorisnickoIme);
+
+            lekar.Terapije.Add(novaTerapija);
+            _lekarService.Update(lekar, l => l.KorisnickoIme == lekar.KorisnickoIme);
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult PregledTerapija()
+        {
+            var lekar = Session["User"] as Lekar;
+            var terapije = lekar.Terapije;
+            return View(terapije);
         }
     }
 }

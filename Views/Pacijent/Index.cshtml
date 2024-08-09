@@ -13,14 +13,19 @@
     <a href="/Pacijent/IzborLekara" class="btn btn-success">Zakažite termin</a>
 </div>
 
+<p>
+    @Html.ActionLink("Pregledajte svoje terapije", "PregledTerapija", "Pacijent", null, new { @class = "btn btn-primary" })
+</p>
+
+
 <h4>Vaši zakazani termini</h4>
 <!-- Tabela sa zakazanim terminima -->
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Lekar</th>
-            <th>Datum i Vreme</th>
-            <th>Opis Terapije</th>
+            <th>Datum i vreme</th>
+            <th>Opis terapije</th>
         </tr>
     </thead>
     <tbody>

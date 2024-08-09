@@ -15,5 +15,16 @@ namespace Dom_zdravlja.Models
         public string Email { get; set; }
 
         public List<Termin> Termini { get; set; }
+
+        public List<Terapija> Terapije { get; set; }
+
+        public List<Pacijent> Pacijenti { get; set; } 
+
+        public Lekar()
+        {
+            Termini = new List<Termin>();
+            Terapije = new List<Terapija>();
+            Pacijenti = new List<Pacijent>();
+        }
     }
 }

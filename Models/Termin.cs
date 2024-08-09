@@ -25,5 +25,7 @@ namespace Dom_zdravlja.Models
         public DateTime DatumVreme { get; set; }
 
         public string OpisTerapije { get; set; }
+
+        public Pacijent Pacijent { get; set; }
     }
 }

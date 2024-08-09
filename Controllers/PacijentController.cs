@@ -79,6 +79,11 @@ namespace Dom_zdravlja.Controllers
                     termin.KorisnickoImePacijenta = pacijent.KorisnickoIme;
                     pacijent.ZakazaniTermini.Add(termin);
 
+                    if (!lekar.Pacijenti.Any(p => p.KorisnickoIme == pacijent.KorisnickoIme))
+                    {
+                        lekar.Pacijenti.Add(pacijent);
+                    }
+
                     _pacijentService.Update(pacijent, p => p.KorisnickoIme == pacijent.KorisnickoIme);
                     _lekarService.Update(lekar, l => l.KorisnickoIme == lekar.KorisnickoIme);
 
@@ -89,5 +94,13 @@ namespace Dom_zdravlja.Controllers
             ViewBag.ErrorMessage = "Termin nije dostupan.";
             return View("Index");
         }
+
+        public ActionResult PregledTerapija()
+        {
+            var pacijent = Session["User"] as Pacijent;
+            var terapije = pacijent.Terapije;
+            return View(terapije);
+        }
+
     }
 }

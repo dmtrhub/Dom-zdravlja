@@ -1,0 +1,21 @@
+﻿@model Dom_zdravlja.Models.Terapija
+
+@{
+    ViewBag.Title = "Prepisivanje terapije";
+}
+
+<h2>Prepisivanje terapije</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Pacijent.KorisnickoIme)
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Naziv)
+    @Html.TextBoxFor(model => model.Naziv, new { @class = "form-control" })
+    @Html.LabelFor(model => model.Opis)
+    @Html.TextAreaFor(model => model.Opis, new { @class = "form-control" })
+</div>
+
+    <button type="submit" class="btn btn-primary">Prepiši</button>
+}

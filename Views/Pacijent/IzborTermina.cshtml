@@ -1,7 +1,7 @@
 ﻿@model Dom_zdravlja.Models.Lekar
 
 @{
-    ViewBag.Title = "Izbor Termina";
+    ViewBag.Title = "Izbor termina";
     var slobodniTermini = Model.Termini.Where(t => t.Status == "slobodan").ToList();
 }
 
@@ -18,7 +18,7 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Datum i Vreme</th>
+                <th>Datum i vreme</th>
                 <th>Opis terapije</th>
                 <th></th>
             </tr>
@@ -34,7 +34,7 @@ else
                         {
                             @Html.Hidden("lekarKorisnickoIme", Model.KorisnickoIme)
                             @Html.Hidden("datumVreme", termin.DatumVreme.ToString("dd'/'MM'/'yyyy HH:mm"))
-                            <button type="submit" class="btn btn-primary">Zakazi</button>
+                            <button type="submit" class="btn btn-primary">Zakaži</button>
                         }
                     </td>
                 </tr>
