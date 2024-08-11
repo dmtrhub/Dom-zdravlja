@@ -15,6 +15,7 @@ namespace Dom_zdravlja.Models
         public string KorisnickoIme { get; set; }
 
         [Required]
+        [Display(Name = "Lozinka")]
         [DataType(DataType.Password)]
         public string Sifra { get; set; }
 
@@ -25,6 +26,7 @@ namespace Dom_zdravlja.Models
         public string Prezime { get; set; }
 
         [Required]
+        [Display(Name = "Datum rodjenja")]
         [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy}", ApplyFormatInEditMode = true)]
         [JsonConverter(typeof(DateConverter))]
         public DateTime DatumRodjenja { get; set; }

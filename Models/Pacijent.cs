@@ -14,6 +14,10 @@ namespace Dom_zdravlja.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
+        [RegularExpression(@"^\d{13}$", ErrorMessage = "JMBG mora imati tačno 13 numeričkih karaktera.")]
+        public string JMBG { get; set; }
+
         public List<Termin> ZakazaniTermini { get; set; }
 
         public List<Terapija> Terapije { get; set; } // Terapije koje su prepisane pacijentu
