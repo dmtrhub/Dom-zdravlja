@@ -20,8 +20,7 @@ namespace Dom_zdravlja.Controllers
             _pacijentService = new JsonFileService<Pacijent>("~/App_Data/Pacijenti.json");
         }
 
-        // GET: Lekar
-        public ActionResult Index()
+        public ActionResult Index(string imeZaPretragu, string statusFilter, string redosled)
         {
             var lekar = Session["User"] as Lekar;
             if (lekar == null)
@@ -41,15 +40,14 @@ namespace Dom_zdravlja.Controllers
 
             _lekarService.Update(lekar, l => l.KorisnickoIme == lekar.KorisnickoIme);
             return View(lekar);
+
         }
 
-        // GET: Kreiranje termina
         public ActionResult KreirajTermin()
         {
             return View();
         }
 
-        // POST: Kreiranje termina
         [HttpPost]
         public ActionResult KreirajTermin(Termin noviTermin)
         {
@@ -59,7 +57,6 @@ namespace Dom_zdravlja.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
-            // Proverite da li je noviTermin null
             if (noviTermin == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Termin cannot be null");
@@ -68,7 +65,6 @@ namespace Dom_zdravlja.Controllers
             noviTermin.Status = "slobodan";
             noviTermin.Lekar = lekar;
 
-            // Proverite da li lekar.Termini nije null
             if (lekar.Termini == null)
             {
                 lekar.Termini = new List<Termin>();
@@ -87,7 +83,6 @@ namespace Dom_zdravlja.Controllers
             var pacijenti = lekar.Pacijenti;
             return View(pacijenti);
         }
-
 
         public ActionResult PrepisivanjeTerapije(string pacijentKorisnickoIme)
         {
@@ -110,19 +105,12 @@ namespace Dom_zdravlja.Controllers
             return View(terapija);
         }
 
-
         [HttpPost]
         public ActionResult PrepisivanjeTerapije(Terapija model)
         {
             var lekar = Session["User"] as Lekar;
             var pacijenti = _pacijentService.Read();
             var pacijent = pacijenti.FirstOrDefault(p => p.KorisnickoIme == model.Pacijent.KorisnickoIme);
-
-            if(pacijent == null || !pacijent.ZakazaniTermini.Any(t => t.Lekar.KorisnickoIme == lekar.KorisnickoIme && t.DatumVreme < DateTime.Now))
-            {
-                ViewBag.ErrorMessage = "Pacijent nije vaš ili nije imao termin kod vas u prošlosti.";
-                return View(model);
-            }
 
             var novaTerapija = new Terapija
             {

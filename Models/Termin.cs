@@ -17,7 +17,7 @@ namespace Dom_zdravlja.Models
 
         [Required]
         [RegularExpression(@"^(slobodan|zakazan)$", ErrorMessage = "Status mora biti 'slobodan' ili 'zakazan'.")]
-        public string Status { get; set; } // Slobodan ili Zakazan
+        public string Status { get; set; }
 
         [Required]
         [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy HH:mm}", ApplyFormatInEditMode = true)]

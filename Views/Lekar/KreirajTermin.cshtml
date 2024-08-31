@@ -4,19 +4,33 @@
     ViewBag.Title = "Kreiranje termina";
 }
 
-<h2>Kreirajte termin</h2>
+<div class="container">
+    <h2 class="text-center text-primary" style="margin-top: 30px">@ViewBag.Title</h2>
 
-@using (Html.BeginForm("KreirajTermin", "Lekar", FormMethod.Post))
-{
-    <div class="form-group">
-        @Html.LabelFor(model => model.DatumVreme, "Datum i vreme")
-        @Html.TextBoxFor(model => model.DatumVreme, new { @class = "form-control", @type = "datetime-local" })
-    </div>
+    @using (Html.BeginForm("KreirajTermin", "Lekar", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Unesite detalje termina</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DatumVreme, "Datum i vreme", new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.DatumVreme, new { @class = "form-control", @type = "datetime-local" })
+                    @Html.ValidationMessageFor(model => model.DatumVreme, "", new { @class = "text-danger" })
+                </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.OpisTerapije, "Opis terapije")
-        @Html.TextBoxFor(model => model.OpisTerapije, new { @class = "form-control" })
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.OpisTerapije, "Opis terapije", new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.OpisTerapije, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.OpisTerapije, "", new { @class = "text-danger" })
+                </div>
 
-    <button type="submit" class="btn btn-success">Kreiraj</button>
-}
+                <div class="form-group">
+                    <input type="submit" value="Kreiraj" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

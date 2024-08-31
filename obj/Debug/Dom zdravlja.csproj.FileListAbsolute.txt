@@ -114,7 +114,6 @@ G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Antlr3.Runtime.pdb
 G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.AssemblyReference.cache
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.CoreCompileInputs.cache
-G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.CopyComplete
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.dll
 G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.pdb
 G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Abstractions.dll
@@ -122,3 +121,4 @@ G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Container.dll
 G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Mvc5.dll
 G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Abstractions.pdb
 G:\Fakultet\Veb\Projekat\Dom zdravlja\bin\Unity.Container.pdb
+G:\Fakultet\Veb\Projekat\Dom zdravlja\obj\Debug\Dom zdravlja.csproj.CopyComplete

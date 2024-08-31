@@ -4,26 +4,36 @@
     ViewBag.Title = "Terapije";
 }
 
-<h2>Vaše terapije</h2>
+<div class="container">
+    <h2 class="text-center text-primary" style="margin-top: 30px">Vaše terapije</h2>
+    <br />
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Naziv</th>
-            <th>Datum</th>
-            <th>Opis</th>
-            <th>Lekar</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var terapija in Model)
-        {
-            <tr>
-                <td>@terapija.Naziv</td>
-                <td>@terapija.Datum.ToString("dd/MM/yyyy")</td>
-                <td>@terapija.Opis</td>
-                <td>@terapija.Lekar.KorisnickoIme</td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Pregled terapija</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Datum</th>
+                        <th>Opis</th>
+                        <th>Lekar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var terapija in Model)
+                    {
+                        <tr>
+                            <td>@terapija.Naziv</td>
+                            <td>@terapija.Datum.ToString("dd'/'MM'/'yyyy")</td>
+                            <td>@terapija.Opis</td>
+                            <td>@terapija.Lekar.KorisnickoIme</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

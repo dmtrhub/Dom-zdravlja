@@ -1,9 +1,16 @@
 ﻿[
   {
-    "KorisnickoIme": "vukovicd",
-    "Sifra": "adminpass123",
+    "KorisnickoIme": "dimitrije",
+    "Sifra": "admin123",
     "Ime": "Dimitrije",
     "Prezime": "Vukovic",
     "DatumRodjenja": "17/11/1998"
+  },
+  {
+    "KorisnickoIme": "novak",
+    "Sifra": "admin123",
+    "Ime": "Novak",
+    "Prezime": "Djokovic",
+    "DatumRodjenja": "10/09/1978"
   }
 ]

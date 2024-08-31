@@ -11,7 +11,7 @@ namespace Dom_zdravlja.Models
     public class Pacijent : Korisnik
     {
         [Required]
-        [EmailAddress]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
@@ -20,11 +20,12 @@ namespace Dom_zdravlja.Models
 
         public List<Termin> ZakazaniTermini { get; set; }
 
-        public List<Terapija> Terapije { get; set; } // Terapije koje su prepisane pacijentu
+        public List<Terapija> Terapije { get; set; } 
 
         public Pacijent()
         {
             Terapije = new List<Terapija>();
+            ZakazaniTermini = new List<Termin>();
         }
     }
 }

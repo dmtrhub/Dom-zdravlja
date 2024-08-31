@@ -23,17 +23,14 @@ namespace Dom_zdravlja.Controllers
             _terminService = new JsonFileService<Termin>("~/App_Data/Termini.json");
         }
 
-        // Metoda za prikaz zakazanih termina za pacijenta
         public ActionResult Index()
         {
-            // Preuzmi trenutno prijavljenog pacijenta iz sesije
             var pacijent = Session["User"] as Pacijent;
             if (pacijent == null)
             {
                 return RedirectToAction("Login", "Home");
             }
 
-            // Prikaz zakazanih termina
             return View(pacijent.ZakazaniTermini);
         }
 
@@ -43,7 +40,6 @@ namespace Dom_zdravlja.Controllers
             return View(lekari);
         }
 
-        // Metoda za prikaz slobodnih termina nakon što je lekar izabran
         [HttpPost]
         public ActionResult IzborTermina(string lekarKorisnickoIme)
         {
@@ -58,7 +54,6 @@ namespace Dom_zdravlja.Controllers
             return View(lekar);
         }
 
-        // Metoda za zakazivanje termina (POST)
         [HttpPost]
         public ActionResult ZakaziTermin(string lekarKorisnickoIme, string datumVreme)
         {
@@ -77,6 +72,7 @@ namespace Dom_zdravlja.Controllers
                 {
                     termin.Status = "zakazan";
                     termin.KorisnickoImePacijenta = pacijent.KorisnickoIme;
+                    termin.Pacijent = pacijent;
                     pacijent.ZakazaniTermini.Add(termin);
 
                     if (!lekar.Pacijenti.Any(p => p.KorisnickoIme == pacijent.KorisnickoIme))
@@ -101,6 +97,5 @@ namespace Dom_zdravlja.Controllers
             var terapije = pacijent.Terapije;
             return View(terapije);
         }
-
     }
 }

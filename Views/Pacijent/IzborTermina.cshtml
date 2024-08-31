@@ -5,42 +5,49 @@
     var slobodniTermini = Model.Termini.Where(t => t.Status == "slobodan").ToList();
 }
 
-<h2>Izaberite termin - dr. @Model.Ime @Model.Prezime</h2>
+<div class="container">
+    <h2 class="text-center text-primary" style="margin-top: 30px">Izaberite termin - dr. @Model.Ime @Model.Prezime</h2>
 
-@if (slobodniTermini.Count == 0)
-{
-    <div class="alert alert-warning">
-        Trenutno nema slobodnih termina za izabranog lekara. Molimo vas da pokušate kasnije.
-    </div>
-}
-else
-{
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Datum i vreme</th>
-                <th>Opis terapije</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var termin in slobodniTermini)
-            {
-                <tr>
-                    <td>@termin.DatumVreme</td>
-                    <td>@termin.OpisTerapije</td>
-                    <td>
-                        @using (Html.BeginForm("ZakaziTermin", "Pacijent", FormMethod.Post))
+    @if (slobodniTermini.Count == 0)
+    {
+        <div class="alert alert-warning" style="margin-top: 30px">
+            Trenutno nema slobodnih termina za izabranog lekara. Molimo vas da pokušate kasnije.
+        </div>
+    }
+    else
+    {
+        <div class="card" style="margin-top: 30px">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Slobodni termini</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Datum i vreme</th>
+                            <th>Opis terapije</th>
+                            <th>Akcija</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var termin in slobodniTermini)
                         {
-                            @Html.Hidden("lekarKorisnickoIme", Model.KorisnickoIme)
-                            @Html.Hidden("datumVreme", termin.DatumVreme.ToString("dd'/'MM'/'yyyy HH:mm"))
-                            <button type="submit" class="btn btn-primary">Zakaži</button>
+                            <tr>
+                                <td>@termin.DatumVreme.ToString("dd'/'MM'/'yyyy HH:mm")</td>
+                                <td>@termin.OpisTerapije</td>
+                                <td>
+                                    @using (Html.BeginForm("ZakaziTermin", "Pacijent", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("lekarKorisnickoIme", Model.KorisnickoIme)
+                                        @Html.Hidden("datumVreme", termin.DatumVreme.ToString("dd'/'MM'/'yyyy HH:mm"))
+                                        <button type="submit" class="btn btn-success">Zakaži</button>
+                                    }
+                                </td>
+                            </tr>
                         }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-
-
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>

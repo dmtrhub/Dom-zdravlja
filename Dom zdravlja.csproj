@@ -261,6 +261,7 @@
     <Content Include="Views\Lekar\PregledTerapija.cshtml" />
     <Content Include="Views\Pacijent\PregledTerapija.cshtml" />
     <Content Include="Views\Administrator\KreirajPacijenta.cshtml" />
+    <Content Include="Views\Administrator\AzurirajPacijenta.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

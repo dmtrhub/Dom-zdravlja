@@ -1,30 +1,39 @@
 ﻿@model Dom_zdravlja.Models.LoginModel
 
-@{ ViewBag.Title = "Prijava"; }
+@{
+    ViewBag.Title = "Prijava";
+}
 
-<h2>Prijava</h2>
+<div class="login-container">
+    <h2 style="margin-top: 30px">Prijava</h2>
 
-<!-- Prikaz greške ako postoji -->
-@if (ViewBag.ErrorMessage != null)
-{
-<div style="color: red;">
-    <strong>@ViewBag.ErrorMessage</strong>
-</div>}
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger text-center">
+            <strong>@ViewBag.ErrorMessage</strong>
+        </div>
+    }
 
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
-{
-@Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
 
-<div>
-    @Html.LabelFor(model => model.KorisnickoIme)
-    @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control", required = true })
-    @Html.ValidationMessageFor(model => model.KorisnickoIme)
+                <div class="form-group" style="margin-top: 15px;">
+                    @Html.LabelFor(model => model.KorisnickoIme)
+                    @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control", required = true })
+                    @Html.ValidationMessageFor(model => model.KorisnickoIme)
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    @Html.LabelFor(model => model.Sifra)
+                    @Html.PasswordFor(model => model.Sifra, new { @class = "form-control", required = true })
+                    @Html.ValidationMessageFor(model => model.Sifra)
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary" style="width : 80%">Prijavi se</button>
+                </div>
+            }
+        </div>
+    </div>
 </div>
-<div>
-    @Html.LabelFor(model => model.Sifra)
-    @Html.PasswordFor(model => model.Sifra, new { @class = "form-control", required = true })
-    @Html.ValidationMessageFor(model => model.Sifra)
-</div>
-<div>
-    <button type="submit" class="btn btn-primary">Prijavi se</button>
-</div>}
